@@ -782,5 +782,31 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
     <script src="js/void.js"></script>
+    <script>
+      $('.contact-form').on('submit', function($e){
+        $e.preventDefault();
+        let body, data = $(this).serializeArray();
+        body = "Rewards from%0A"
+        for(const d of data){
+          if(d.name == "name"){
+            body += "name: "+d.value + "%0A";
+          }
+          if(d.name == "email"){
+            body += "email: "+d.value + "%0A";;
+          }
+          if(d.name == "phone"){
+            body += "phone: "+d.value + "%0A";;
+          }
+          if(d.name == "occupation"){
+            body += "occupation: "+d.value + "%0A";;
+          }
+          if(d.name == "message"){
+            body += "Message: %0A"+d.value + "%0A";;
+          }
+        }
+
+        window.open('mailto:satheshs.sat@gmail.com?subject=For%20Athulya&body='+body);
+      })
+    </script>
   </body>
 </html>
