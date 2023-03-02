@@ -74,6 +74,7 @@
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <p style="color: #ffffff;" id="time"></p>
             <ul class="nav navbar-nav">
               <li><a class="page-scroll" href="#intro"><span>01</span>Intro</a></li>
               <li><a class="page-scroll" href="#about"><span>02</span>About</a></li>
@@ -783,6 +784,10 @@
     <script src="js/scrolling-nav.js"></script>
     <script src="js/void.js"></script>
     <script>
+      $('#time').html(new Date().toString());
+      setInterval(()=>{
+        $('#time').html(new Date().toString());
+      },1000)
       $('.contact-form').on('submit', function($e){
         $e.preventDefault();
         let body, data = $(this).serializeArray();
