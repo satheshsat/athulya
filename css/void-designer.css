@@ -1232,6 +1232,11 @@ ul.social-icons li a:hover{
   transform: translateY(-50%);
 }
 
+#timeline, #testimonials .container, #testimonials .container blockquote, #gallery, #about{
+  color: #ffffff;
+  background: #191919;
+}
 
-
-
+#about .photo-block .photo{
+  z-index: 0;
+}
